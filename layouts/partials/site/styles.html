@@ -1,0 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+{{ $s := resources.Get "sass/main.scss" | toCSS | postCSS (dict "config" "postcss.config.js") | minify }}
+<link rel="stylesheet" href="{{ $s.Permalink }}" />

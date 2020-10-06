@@ -1,0 +1,53 @@
+{{- define "main" -}}
+<div id="home-hero">
+    <div class="container">
+        <div class="row section">
+            <div class="col-sm-6">
+                <h1>
+                    Automatically contribute to environmental or social projects
+                </h1>
+                <div class="signup-form">
+                    <form name="beta" method="POST" data-netlify="true">
+                        <input type="email" required class="styled" placeholder="Enter your email address" id="beta-email">
+                        <button class="btn btn-md">Get beta access</button>
+                    </form>
+                    <p>
+                        I'll never share your email. Never. You will receive a form to help me understand
+                        what you need. I should release the beta in the coming weeks.
+                    </p>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+        </div>
+    </div>
+</div>
+<div id="home-steps">
+    <div class="container">
+        <div class="row section spaced">
+            <div class="col-xs-12">
+                <h2>Share a part of your revenue</h2>
+            </div>
+            {{- range .Params.features -}}
+            <div class="col-md-3 icons">
+                {{- partial (printf "icons/%s.html" .icon) -}}
+                <h3>{{- .title -}}</h3>
+                <p>{{- .description -}}</p>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+<div id="home-features">
+    <div class="container">
+        <div class="row section spaced">
+            <div class="col-xs-12 align-center">
+                <h2>It shouldn't be hard to donate</h2>
+                <p style="max-width: 500px; margin: auto;">
+                    We monitor your sales and contribute to projects you care about,
+                    in ways your business can sustain. Because we know you care.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{{- end -}}
