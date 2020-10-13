@@ -7,7 +7,7 @@ features:
     description: Link our app to your Stripe account so that we can monitor sales.
   - icon: select-care
     title: Select causes you care about
-    description: You've worked hard to earn that money. Make sure it goes to the right hand.
+    description: You've worked hard to earn that money. Make sure it goes in the right hands.
   - icon: donation-percentage
     title: Determine your contribution
     description: Not every product has the same margin. But every contribution counts.

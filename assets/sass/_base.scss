@@ -71,7 +71,7 @@ ul, ol, li {
 
 .hide-md {
     display: none !important;
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: block !important;
     }
 }
@@ -79,6 +79,15 @@ ul, ol, li {
 .hide-md-up {
     @include breakpoint(md) {
         display: none !important;
+    }
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint(lg) {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

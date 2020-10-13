@@ -1,14 +1,14 @@
 {{- define "main" -}}
 <div id="home-hero">
     <div class="container">
-        <div class="row section">
-            <div class="col-sm-6">
+        <div class="row section middle-xs">
+            <div class="col-sm-12 col-lg-6">
                 <h1>
-                    Automatically contribute to environmental or social projects
+                    Helping SaaS founders contribute to environmental or social projects — effortlessly
                 </h1>
                 <div class="signup-form">
                     <form name="beta" method="POST" data-netlify="true">
-                        <input type="email" required class="styled" placeholder="Enter your email address" id="beta-email">
+                        <input type="email" required class="styled" placeholder="Enter your email address" id="beta-email" name="email">
                         <button class="btn btn-md">Get beta access</button>
                     </form>
                     <p>
@@ -17,7 +17,9 @@
                     </p>
                 </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+            <div class="col-lg-6 align-right hide-md">
+                {{- partial "icons/hero.html" -}}
+            </div>
         </div>
     </div>
 </div>
@@ -42,10 +44,15 @@
         <div class="row section spaced">
             <div class="col-xs-12 align-center">
                 <h2>It shouldn't be hard to donate</h2>
-                <p style="max-width: 500px; margin: auto;">
-                    We monitor your sales and contribute to projects you care about,
-                    in ways your business can sustain. Because we know you care.
+                <p class="subtitle">
+                    Automatically monitor your sales and contribute to projects you care about,
+                    in ways your business can sustain. To prove the concept, the first version
+                    of the app automatically plant trees for you. You can plant a number of tree
+                    per sales, or dedicate a percentage of your sales to tree planting.
                 </p>
+                <a href="#home-hero" title="Get beta access" class="btn">
+                    Get beta access
+                </a>
             </div>
         </div>
     </div>
